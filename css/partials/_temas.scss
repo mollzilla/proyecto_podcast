@@ -1,0 +1,55 @@
+
+.temas {
+  @include icons-display($icons);
+
+  h2 {
+    margin: 48px auto 24px auto;
+  }
+  
+  .temas-cells {
+    display: flex;
+    flex-direction: column;
+
+    .cell {
+      margin-bottom: 65px;
+    }
+  }
+
+  h3 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 800;
+    margin-top: 12px;
+  }
+
+
+}
+
+
+@media(min-width:1024px) {
+
+  .temas {
+    padding: 0 200px;
+
+    h2 {
+      width: unset;
+      padding: 65px 0;
+    }
+
+    .temas-cells {
+      flex-direction: row;
+      justify-content: space-between;
+
+      .cell {
+        width: 260px;
+        margin: 0;
+
+        h3 {
+          font-size: 24px;
+          text-align: center;
+          padding-top: 16px;
+        }
+      }
+    }
+
+  }
+}

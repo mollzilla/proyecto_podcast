@@ -1,0 +1,12 @@
+
+@mixin icons-display($map) {
+  @each $order, $icon in $map {
+    .tema-#{$order} {
+      background-image: url($icon);
+      height: 104px;
+      width: 104px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+}

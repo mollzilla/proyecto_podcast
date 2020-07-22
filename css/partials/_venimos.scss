@@ -1,0 +1,52 @@
+.venimos {
+
+  .phone {
+    position: relative;
+    height: 500px;
+    
+    img {
+      position: absolute;
+      width: 320px;
+      top: -116px;
+    }
+  }
+
+  .venimos-article {
+    width: 90%;
+
+    h2 {
+      margin: 0 auto 8px auto;
+    }
+  }
+
+  margin-bottom: 54px;
+}
+
+@media(min-width:1024px) {
+  .venimos {
+    position: relative;
+    top: -150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 200px;
+
+    .phone {
+      img {
+        position:relative;
+        top:0;
+      }
+    }
+
+ 
+
+    .venimos-article {
+      max-width: 484px;
+
+      h2 {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+

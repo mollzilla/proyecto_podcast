@@ -1,0 +1,35 @@
+.invitadxs {
+  h2 {
+    margin: 0 auto 14px auto;
+  }
+}
+
+.coders {
+  display: flex;
+  flex-direction: column;
+}
+
+@each $order, $coder in $coders {
+  .coder-#{$order} {
+    background-image: url($coder);
+    height: 243px;
+    width: 100%;
+    background-size: cover;
+  }
+}
+
+@media(min-width:1024px) {
+
+  h2 {
+    margin: 0 auto 36px auto;
+  }
+  .coders {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    div {
+      width: 33.33%;
+      height: 364px;
+    }
+  }
+}

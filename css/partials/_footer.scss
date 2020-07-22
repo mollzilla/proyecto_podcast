@@ -1,0 +1,40 @@
+
+footer {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0 auto;
+
+  p {
+    text-align: center;
+  }
+
+  .social-media {
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    }
+
+}
+
+
+@media(min-width:1024px) {
+  footer {
+    margin: 0px 100px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      text-align: left;
+    }
+
+    li {
+      margin: 0 36px 0 0;
+    }
+  }
+}
