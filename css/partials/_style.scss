@@ -16,6 +16,7 @@ header {
 }
 
 .first-stripe {
+  background-color: #FFF;
   box-sizing: border-box;
   width: 100%;
   display: flex;
@@ -115,13 +116,19 @@ label {
   line-height: 28px;
 }
 
-#toggle {
-  display: none;
-}
-
 .botonera {
+  position: absolute;
+  top: 44px;
   width: 100%;
-  display: none;
+  height:224px;
+
+  display: block;
+  background-color: #0000EC;
+  color: #FFF;
+  transform:translateY(-268px);
+  opacity: 0;
+
+  transition: all .5s $botonera-easeing;
 }
 
 .botonera a {
@@ -140,11 +147,9 @@ label {
   }
 }
 
-#toggle:checked +.botonera {
-  display: block;
-  background-color: #0000EC;
-  height: 224px;
-  color: #FFF;
+#burger__input:checked ~ .botonera {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .conoce-mas, .escucha {

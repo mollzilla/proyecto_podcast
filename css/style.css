@@ -70,6 +70,168 @@
   }
 }
 
+/*------------------------------------*\
+    
+  $CUSTOM PROPERTIES / VARIABLES
+
+\*------------------------------------*/
+:root {
+  --black: #000;
+  --white: #fff;
+  --color-1: #bada55;
+  /*------------------------------------*\ 
+    navbar settings 
+  \*------------------------------------*/
+  --bar-width: 1em;
+  --bar-height: .15em;
+  --bar-margin: .08em;
+  --bar-borderradius: 0.1em;
+  /* arrow angle from 0 - 90 */
+  --bar-arrow-angle-value: 45;
+  --bar-transition: cubic-bezier(.25,.01,.75,1);
+  --bar-transition-time: .15s;
+  /*------------------------------------*\ 
+    navbar calculations
+  \*------------------------------------*/
+  /* flexbox prevents margin collapse, so add that margin twice*/
+  --bar-offset: calc( var(--bar-height) + var(--bar-margin) * 2 );
+  /* arrow angle */
+  --bar-arrow-angle: calc( var(--bar-arrow-angle-value) * 1deg );
+  /* offset of arrows so that they align perfectly */
+  --bar-arrow-offset: calc( var(--bar-height) * 1.2 + var(--bar-margin) * 2 );
+  /* center arrow to label without middle line */
+  --bar-arrow-offsetcenter: calc( 50% * var(--bar-arrow-angle-value) / 90 );
+}
+
+/*------------------------------------*\
+
+  $TUTORIAL ESSENTIAL
+
+\*------------------------------------*/
+/* hide input */
+.burger__input {
+  display: none;
+}
+
+.burger__label {
+  display: none;
+  /* if you don't want to show this for the desktop version */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* put Burger on top of navigation*/
+  position: relative;
+  z-index: 11000;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* put this part into a media query, when to show the nav */
+.burger__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.burger__label > * {
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+/*------------------------------------*\
+  $FONT AWESOME
+\*------------------------------------*/
+.burger__input:checked ~ .burger__label i:before {
+  content: '\f00d';
+  /* change font awesome icon to times symbol */
+}
+
+/*------------------------------------*\
+  $CUSTOM LINES
+\*------------------------------------*/
+.burger__lines {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  -webkit-transition: -webkit-transform var(--bar-transition-time) var(--bar-transition);
+  transition: -webkit-transform var(--bar-transition-time) var(--bar-transition);
+  transition: transform var(--bar-transition-time) var(--bar-transition);
+  transition: transform var(--bar-transition-time) var(--bar-transition), -webkit-transform var(--bar-transition-time) var(--bar-transition);
+}
+
+.burger__line {
+  display: block;
+  width: var(--bar-width);
+  height: var(--bar-height);
+  margin-top: var(--bar-margin);
+  margin-bottom: var(--bar-margin);
+  border-radius: var(--bar-borderradius);
+  background-color: var(--black);
+  -webkit-transition: all var(--bar-transition-time) var(--bar-transition);
+  transition: all var(--bar-transition-time) var(--bar-transition);
+}
+
+/*------------------------------------*\
+  $ROTATE CROSS
+\*------------------------------------*/
+/* animate back to inactive */
+.burger__label--rotatecross .burger__line:nth-child(2) {
+  -webkit-transition: width var(--bar-transition-time) var(--bar-transition);
+  transition: width var(--bar-transition-time) var(--bar-transition);
+}
+
+.burger__label--rotatecross .burger__line:nth-child(1),
+.burger__label--rotatecross .burger__line:nth-child(3) {
+  -webkit-transition-delay: var(--bar-transition-time);
+          transition-delay: var(--bar-transition-time);
+}
+
+/* animate to active state */
+/* step 1 - middle line width to zero */
+.burger__input:checked ~ .burger__label--rotatecross .burger__line:nth-child(2) {
+  width: 0;
+  -webkit-transition-delay: calc( var(--bar-transition-time) * 0);
+          transition-delay: calc( var(--bar-transition-time) * 0);
+}
+
+/* step 2 - make a cross */
+.burger__input:checked ~ .burger__label--rotatecross .burger__line:nth-child(1),
+.burger__input:checked ~ .burger__label--rotatecross .burger__line:nth-child(3) {
+  -webkit-transition-delay: var(--bar-transition-time);
+          transition-delay: var(--bar-transition-time);
+}
+
+.burger__input:checked ~ .burger__label--rotatecross .burger__line:nth-child(1) {
+  -webkit-transform: translateY(var(--bar-offset));
+          transform: translateY(var(--bar-offset));
+}
+
+.burger__input:checked ~ .burger__label--rotatecross .burger__line:nth-child(3) {
+  -webkit-transform: translateY(calc( var(--bar-offset) * -1)) rotate(90deg);
+          transform: translateY(calc( var(--bar-offset) * -1)) rotate(90deg);
+}
+
+/* step 3 - rotate everything */
+.burger__input:checked ~ .burger__label--rotatecross .burger__lines {
+  -webkit-transition: all var(--bar-transition-time) var(--bar-transition);
+  transition: all var(--bar-transition-time) var(--bar-transition);
+  -webkit-transition-delay: calc( var(--bar-transition-time) * 2);
+          transition-delay: calc( var(--bar-transition-time) * 2);
+  -webkit-transform: rotate(var(--bar-arrow-angle));
+          transform: rotate(var(--bar-arrow-angle));
+}
+
 .blue-swirl {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -732,6 +894,7 @@ header {
 }
 
 .first-stripe {
+  background-color: #FFF;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
@@ -839,13 +1002,19 @@ label {
   line-height: 28px;
 }
 
-#toggle {
-  display: none;
-}
-
 .botonera {
+  position: absolute;
+  top: 44px;
   width: 100%;
-  display: none;
+  height: 224px;
+  display: block;
+  background-color: #0000EC;
+  color: #FFF;
+  -webkit-transform: translateY(-268px);
+          transform: translateY(-268px);
+  opacity: 0;
+  -webkit-transition: all 0.5s cubic-bezier(0.25, 0.01, 0.75, 1);
+  transition: all 0.5s cubic-bezier(0.25, 0.01, 0.75, 1);
 }
 
 .botonera a {
@@ -865,11 +1034,10 @@ label {
   text-decoration: line-through;
 }
 
-#toggle:checked + .botonera {
-  display: block;
-  background-color: #0000EC;
-  height: 224px;
-  color: #FFF;
+#burger__input:checked ~ .botonera {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 .conoce-mas, .escucha {

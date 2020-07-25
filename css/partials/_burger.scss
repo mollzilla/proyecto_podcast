@@ -1,0 +1,150 @@
+/*------------------------------------*\
+    
+  $CUSTOM PROPERTIES / VARIABLES
+
+\*------------------------------------*/
+:root {
+  --black: #000;
+  --white: #fff;
+  --color-1: #bada55;
+  
+  /*------------------------------------*\ 
+    navbar settings 
+  \*------------------------------------*/
+  --bar-width: 1em;
+  --bar-height: .15em;
+  --bar-margin: .08em;
+  --bar-borderradius: 0.1em;
+  
+  /* arrow angle from 0 - 90 */
+  --bar-arrow-angle-value: 45; 
+
+  --bar-transition: cubic-bezier(.25,.01,.75,1);
+  --bar-transition-time: .15s;
+  
+  /*------------------------------------*\ 
+    navbar calculations
+  \*------------------------------------*/
+  /* flexbox prevents margin collapse, so add that margin twice*/
+  --bar-offset: calc( var(--bar-height) + var(--bar-margin) * 2 );   
+  /* arrow angle */
+  --bar-arrow-angle: calc( var(--bar-arrow-angle-value) * 1deg );
+  /* offset of arrows so that they align perfectly */
+  --bar-arrow-offset: calc( var(--bar-height) * 1.2 + var(--bar-margin) * 2 );
+  /* center arrow to label without middle line */
+  --bar-arrow-offsetcenter: calc( 50% * var(--bar-arrow-angle-value) / 90 );
+}
+
+/*------------------------------------*\
+
+  $TUTORIAL ESSENTIAL
+
+\*------------------------------------*/
+
+/* hide input */
+.burger__input {
+    display: none;
+}
+
+.burger__label {
+  display: none; /* if you don't want to show this for the desktop version */
+  align-items: center;
+  /* put Burger on top of navigation*/
+  position: relative;
+  z-index: 11000;
+  
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+/* put this part into a media query, when to show the nav */
+.burger__label {
+  display: flex;
+}
+
+.burger__label > * {
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+/*------------------------------------*\
+  $FONT AWESOME
+\*------------------------------------*/
+.burger__input:checked ~ .burger__label i:before {
+    content: '\f00d'; /* change font awesome icon to times symbol */
+}
+
+/*------------------------------------*\
+  $CUSTOM LINES
+\*------------------------------------*/
+.burger__lines {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  
+  transition: transform var(--bar-transition-time) var(--bar-transition);
+}
+
+.burger__line {
+  display: block;
+
+  width: var(--bar-width);
+  height: var(--bar-height);
+
+  margin-top: var(--bar-margin);
+  margin-bottom: var(--bar-margin);
+  border-radius: var(--bar-borderradius);
+
+  background-color: var(--black);
+  
+  transition: all var(--bar-transition-time) var(--bar-transition);
+}
+
+/*------------------------------------*\
+  $ROTATE CROSS
+\*------------------------------------*/
+/* animate back to inactive */
+.burger__label--rotatecross .burger__line:nth-child(2) {
+  transition: width var(--bar-transition-time) var(--bar-transition);
+  // transition-delay: calc( var(--bar-transition-time) * 2);
+}
+
+.burger__label--rotatecross .burger__line:nth-child(1),
+.burger__label--rotatecross .burger__line:nth-child(3) {
+  transition-delay: var(--bar-transition-time);
+}
+
+/* animate to active state */
+
+/* step 1 - middle line width to zero */
+.burger__input:checked ~ .burger__label--rotatecross .burger__line:nth-child(2) {
+  width: 0;
+  transition-delay: calc( var(--bar-transition-time) * 0);
+}
+
+/* step 2 - make a cross */
+.burger__input:checked ~ .burger__label--rotatecross .burger__line:nth-child(1),
+.burger__input:checked ~ .burger__label--rotatecross .burger__line:nth-child(3) {
+  transition-delay: var(--bar-transition-time);
+}
+
+.burger__input:checked ~ .burger__label--rotatecross .burger__line:nth-child(1) {
+  transform: translateY( var(--bar-offset) );
+}
+
+.burger__input:checked ~ .burger__label--rotatecross .burger__line:nth-child(3){
+  transform: 
+    translateY(calc( var(--bar-offset) * -1 ))
+    rotate(90deg)
+  ;
+}
+
+/* step 3 - rotate everything */
+.burger__input:checked ~ .burger__label--rotatecross .burger__lines {
+  transition: all var(--bar-transition-time) var(--bar-transition);
+  transition-delay: calc( var(--bar-transition-time) * 2 );
+  transform: rotate(var(--bar-arrow-angle));
+}
