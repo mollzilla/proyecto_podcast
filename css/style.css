@@ -226,45 +226,243 @@
 }
 
 .coder-1 {
+  overflow: hidden;
   background-image: url("../images/grace-hopper.png");
   width: 100vw;
   height: 75vw;
   background-size: cover;
 }
 
+.img-inner-text {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(90, 90, 90, 0.75)), to(rgba(0, 0, 0, 0.75)));
+  background-image: linear-gradient(rgba(90, 90, 90, 0.75), rgba(0, 0, 0, 0.75));
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  font-size: 2rem;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.img-inner-text a {
+  color: #e3e9e9;
+}
+
+.coder-1:hover .img-inner-text {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 .coder-2 {
+  overflow: hidden;
   background-image: url("../images/Katie-Bouman.png");
   width: 100vw;
   height: 75vw;
   background-size: cover;
 }
 
+.img-inner-text {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(90, 90, 90, 0.75)), to(rgba(0, 0, 0, 0.75)));
+  background-image: linear-gradient(rgba(90, 90, 90, 0.75), rgba(0, 0, 0, 0.75));
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  font-size: 2rem;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.img-inner-text a {
+  color: #e3e9e9;
+}
+
+.coder-2:hover .img-inner-text {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 .coder-3 {
+  overflow: hidden;
   background-image: url("../images/Margaret_Hamilton.png");
   width: 100vw;
   height: 75vw;
   background-size: cover;
 }
 
+.img-inner-text {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(90, 90, 90, 0.75)), to(rgba(0, 0, 0, 0.75)));
+  background-image: linear-gradient(rgba(90, 90, 90, 0.75), rgba(0, 0, 0, 0.75));
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  font-size: 2rem;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.img-inner-text a {
+  color: #e3e9e9;
+}
+
+.coder-3:hover .img-inner-text {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 .coder-4 {
+  overflow: hidden;
   background-image: url("../images/Computer operators with an Eniac — the world’s first programmable general-purpose computer.png");
   width: 100vw;
   height: 75vw;
   background-size: cover;
 }
 
+.img-inner-text {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(90, 90, 90, 0.75)), to(rgba(0, 0, 0, 0.75)));
+  background-image: linear-gradient(rgba(90, 90, 90, 0.75), rgba(0, 0, 0, 0.75));
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  font-size: 2rem;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.img-inner-text a {
+  color: #e3e9e9;
+}
+
+.coder-4:hover .img-inner-text {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 .coder-5 {
+  overflow: hidden;
   background-image: url("../images/An_ERAUnivac_1103_computer_in_the_1950s.png");
   width: 100vw;
   height: 75vw;
   background-size: cover;
 }
 
+.img-inner-text {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(90, 90, 90, 0.75)), to(rgba(0, 0, 0, 0.75)));
+  background-image: linear-gradient(rgba(90, 90, 90, 0.75), rgba(0, 0, 0, 0.75));
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  font-size: 2rem;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.img-inner-text a {
+  color: #e3e9e9;
+}
+
+.coder-5:hover .img-inner-text {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 .coder-6 {
+  overflow: hidden;
   background-image: url("../images/susan-kare.png");
   width: 100vw;
   height: 75vw;
   background-size: cover;
+}
+
+.img-inner-text {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(90, 90, 90, 0.75)), to(rgba(0, 0, 0, 0.75)));
+  background-image: linear-gradient(rgba(90, 90, 90, 0.75), rgba(0, 0, 0, 0.75));
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  font-size: 2rem;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.img-inner-text a {
+  color: #e3e9e9;
+}
+
+.coder-6:hover .img-inner-text {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 @media (min-width: 768px) {

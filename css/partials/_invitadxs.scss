@@ -11,10 +11,33 @@
 
 @each $order, $coder in $coders {
   .coder-#{$order} {
+    overflow: hidden;
     background-image: url($coder);
     width: 100vw;
     height: 100vw*.75;
     background-size: cover;
+  }
+
+  .img-inner-text {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-image: linear-gradient(rgba(90,90,90, 0.75), rgba(0,0,0, 0.75));
+    transform: translateY(100%);
+    font-size: 2rem;
+
+    a {
+      color: rgb(227, 233, 233);
+    }
+  
+    transition:transform .5s;
+  }
+  
+  .coder-#{$order}:hover .img-inner-text {
+    transform: translateY(0);
   }
 }
 
