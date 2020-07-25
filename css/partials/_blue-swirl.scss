@@ -1,0 +1,61 @@
+.blue-swirl {
+  background-image: linear-gradient(#0000FF, #0000A3);
+  padding: 20vw 11px 167px;
+  position: relative;
+
+  &:before {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10vw 100vw 0 0;
+    border-color: #FFF transparent transparent transparent;
+  }
+
+  &:after {
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 10vw 100vw;
+    border-color: transparent transparent #FFF transparent;
+  }
+
+  iframe {
+    height: 232px;
+    width: 298px;
+    margin-bottom: 11px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h2 {
+    color: #FFF;
+    margin-bottom: 21px;
+  }
+}
+
+@media(min-width:1024px) {
+
+  .blue-swirl {
+    padding: 186px 100px 167px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    iframe {
+      width: 584px;
+      height: 232px;
+      margin: unset;
+      margin-bottom: 72px;
+    }
+  }
+}

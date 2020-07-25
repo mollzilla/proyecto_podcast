@@ -2,12 +2,12 @@
 
   .phone {
     position: relative;
-    height: 500px;
+    height: 400px;
     
     img {
       position: absolute;
       width: 320px;
-      top: -116px;
+      top: -119px;
     }
   }
 
@@ -22,30 +22,33 @@
   margin-bottom: 54px;
 }
 
+
+
 @media(min-width:1024px) {
   .venimos {
     position: relative;
-    top: -150px;
+    height:660px;
+    
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     padding: 0 200px;
+    margin: unset;
+
 
     .phone {
+      height: unset;
       img {
-        position:relative;
+        position: relative;
         top:0;
+        width: 457.6px;
+        top: -150px;
       }
     }
 
- 
-
     .venimos-article {
       max-width: 484px;
-
-      h2 {
-        margin-top: 20px;
-      }
+      margin-top: 24px;
     }
   }
 }

@@ -133,17 +133,17 @@ label {
   width: 90%;
   display: block;
   text-transform: uppercase;
-  background-color: #00F3BB;
   line-height: 48px;
   text-align: center;
   font-size: 18px;
   font-family: 'IBM Plex Mono', monospace;
-  transition: background-image .5s, color .5s;
+  background-image: linear-gradient(90deg,  #00F0B8 20%,#0000FE);
+  background-size: 500%;
+  transition: all .4s;
 
   &:hover {
     color: #FFF;
-    background-image: linear-gradient(90deg, #00F0B8, #0000FE);
-
+    background-size: 100%;
   }
 }
 
@@ -151,8 +151,9 @@ label {
   position: relative;
   background-image: linear-gradient(#0000FF, #0000A3);
   padding-top: 20vw;
-  padding-bottom: 20vw;
+  padding-bottom: 40vw;
   margin-top: 24px;
+  margin-bottom: 24px;
 
    h2 {
     color: white;
@@ -161,14 +162,28 @@ label {
     margin-bottom: 21px;
   }
 
+  .embed {
+    height: 232px;
+    text-align: center;
+    padding: 0 11px 11px;
+
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+    
+  
+    iframe {
+      height: 232px;
+      width: 100%;
+      border: 0;
+      margin-bottom: 11px;
+    }
+  }
+
 }
 
 .blue-twist-inner {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
 
 }
@@ -188,7 +203,7 @@ label {
 .blue-twist-inner::after {
   position:absolute;
   content: "";
-  bottom:-20vw;
+  bottom:-40vw;
   left:0;
   width: 0;
   height: 0;
@@ -197,13 +212,37 @@ label {
   border-color: transparent #FFF transparent transparent;
 }
 
-.embed {
-  text-align: center;
 
-  iframe {
-    height: 198px;
-    width: 93.1%;
-    border: 0;
+
+@media(min-width:768px) {
+
+  .blue-twist {
+    margin-top: 0;    
+
+    .blue-twist-inner {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0 100px;
+
+      h2 {
+        margin-left: 100px;
+      }
+
+      .embed {
+        margin: 0;
+        width: 35vw;
+
+        iframe {
+          overflow: hidden;
+          width: 100%;
+          margin: 0;
+          height: 200px;
+        }
+
+      }
+    }
   }
 }
 
@@ -301,14 +340,19 @@ label {
   }
 
   .blue-twist {
-    margin-top: 0;    
+    padding-top:0;
 
     .blue-twist-inner {
+      margin-top: 200px;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
       padding: 0 100px;
+
+      &:before {
+        top:0;
+      }
 
       h2 {
         margin-left: 100px;
@@ -316,18 +360,15 @@ label {
 
       .embed {
         margin: 0;
+        width: 40.3vw;
 
         iframe {
           overflow: hidden;
-          width: 40.3vw;
+          width: 100%;
           margin: 0;
           height: 232px;
         }
-      
-          // &:nth-of-type(1) {
-          //   margin-bottom: 72px;
-          // }
-          
+
       }
     }
   }

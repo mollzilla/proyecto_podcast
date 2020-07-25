@@ -16,9 +16,8 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-
+    font-size: 18px;
     }
-
 }
 
 
@@ -26,15 +25,16 @@ footer {
   footer {
     margin: 0px 100px;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 
     p {
       text-align: left;
     }
 
-    li {
-      margin: 0 36px 0 0;
+    .social-media {
+      width: 15vw;
+      justify-content: flex-end;
     }
   }
 }
