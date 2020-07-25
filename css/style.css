@@ -52,7 +52,27 @@
   }
 }
 
+@-webkit-keyframes dot {
+  100% {
+    -webkit-transform: scale(45);
+            transform: scale(45);
+    opacity: 0;
+    background-color: #3b3be6;
+  }
+}
+
+@keyframes dot {
+  100% {
+    -webkit-transform: scale(45);
+            transform: scale(45);
+    opacity: 0;
+    background-color: #3b3be6;
+  }
+}
+
 .blue-swirl {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#0000FF), to(#0000A3));
   background-image: linear-gradient(#0000FF, #0000A3);
   padding: 20vw 11px 167px;
@@ -98,9 +118,21 @@
   margin-bottom: 21px;
 }
 
-@media (min-width: 1024px) {
+.flat-end.blue-swirl::after {
+  border: unset;
+}
+
+.novedades {
+  padding-bottom: 67px;
+}
+
+.novedades h2 {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
   .blue-swirl {
-    padding: 186px 100px 167px;
+    padding: 15vw 5% 15vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -111,10 +143,17 @@
         flex-wrap: wrap;
   }
   .blue-swirl iframe {
-    width: 584px;
+    width: 40vw;
+    max-width: 584px;
     height: 232px;
     margin: unset;
     margin-bottom: 72px;
+  }
+}
+
+@media (min-width: 1240px) {
+  .blue-swirl {
+    padding: 186px 100px 167px;
   }
 }
 
@@ -470,40 +509,6 @@ footer .social-media {
   }
 }
 
-.novedades .blue-twist-inner {
-  padding: unset;
-}
-
-.novedades .blue-twist-inner::after {
-  display: none;
-}
-
-@media (min-width: 1024px) {
-  .novedades.blue-twist {
-    padding-top: 12vw;
-    padding-bottom: 12vw;
-  }
-  .novedades.blue-twist .blue-twist-inner {
-    padding: unset;
-  }
-  .novedades.blue-twist .blue-twist-inner h2 {
-    margin: 36px auto;
-    width: 100%;
-    text-align: center;
-  }
-  .novedades.blue-twist .blue-twist-inner:before {
-    top: -12vw;
-  }
-  .novedades.blue-twist .blue-twist-inner:after {
-    display: none;
-  }
-  .novedades.blue-twist .green-button {
-    height: 56px;
-    line-height: 56px;
-    width: 345px;
-  }
-}
-
 * {
   margin: 0 auto;
 }
@@ -525,6 +530,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-bottom: 24px;
 }
 
 .first-stripe {
@@ -583,8 +589,26 @@ h2 {
   text-decoration: line-through;
 }
 
+.dot-container {
+  position: relative;
+  display: inline-block;
+  height: 36px;
+  width: 8px;
+  vertical-align: baseline;
+}
+
 #dot {
-  color: #0000EC;
+  position: absolute;
+  bottom: 0;
+  right: 8px;
+  height: 8px;
+  width: 8px;
+  background-color: #0000EC;
+  border-radius: 50%;
+  -webkit-animation: dot 2.5s;
+          animation: dot 2.5s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 p {
@@ -650,10 +674,11 @@ label {
   color: #FFF;
 }
 
-.green-button {
-  width: 90%;
+.conoce-mas, .escucha {
   display: block;
+  width: 90vw;
   text-transform: uppercase;
+  height: 48px;
   line-height: 48px;
   text-align: center;
   font-size: 18px;
@@ -665,104 +690,49 @@ label {
   transition: all .4s;
 }
 
-.green-button:hover {
+.conoce-mas:hover, .escucha:hover {
   color: #FFF;
   background-size: 100%;
 }
 
-.blue-twist {
-  position: relative;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#0000FF), to(#0000A3));
-  background-image: linear-gradient(#0000FF, #0000A3);
-  padding-top: 20vw;
-  padding-bottom: 40vw;
-  margin-top: 24px;
-  margin-bottom: 24px;
-}
-
-.blue-twist h2 {
-  color: white;
-  font-size: 36px;
-  font-weight: 600;
-  margin-bottom: 21px;
-}
-
-.blue-twist .embed {
-  height: 232px;
-  text-align: center;
-  padding: 0 11px 11px;
-}
-
-.blue-twist .embed:last-of-type {
-  padding-bottom: 0;
-}
-
-.blue-twist .embed iframe {
-  height: 232px;
-  width: 100%;
-  border: 0;
-  margin-bottom: 11px;
-}
-
-.blue-twist-inner {
-  position: relative;
-}
-
-.blue-twist-inner::before {
-  position: absolute;
-  content: "";
-  top: -20vw;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 10vw 100vw 0 0;
-  border-color: #FFF transparent transparent transparent;
-}
-
-.blue-twist-inner::after {
-  position: absolute;
-  content: "";
-  bottom: -40vw;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 10vw 100vw 0 0;
-  border-color: transparent #FFF transparent transparent;
-}
-
 @media (min-width: 768px) {
-  .blue-twist {
-    margin-top: 0;
+  .conoce-mas {
+    display: block;
+    width: 50vw;
+    text-transform: uppercase;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'IBM Plex Mono', monospace;
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(20%, #00F0B8), to(#0000FE));
+    background-image: linear-gradient(90deg, #00F0B8 20%, #0000FE);
+    background-size: 500%;
+    -webkit-transition: all .4s;
+    transition: all .4s;
   }
-  .blue-twist .blue-twist-inner {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding: 0 100px;
+  .conoce-mas:hover {
+    color: #FFF;
+    background-size: 100%;
   }
-  .blue-twist .blue-twist-inner h2 {
-    margin-left: 100px;
+  .escucha {
+    display: block;
+    width: 50vw;
+    text-transform: uppercase;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'IBM Plex Mono', monospace;
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(20%, #00F0B8), to(#0000FE));
+    background-image: linear-gradient(90deg, #00F0B8 20%, #0000FE);
+    background-size: 500%;
+    -webkit-transition: all .4s;
+    transition: all .4s;
   }
-  .blue-twist .blue-twist-inner .embed {
-    margin: 0;
-    width: 35vw;
-  }
-  .blue-twist .blue-twist-inner .embed iframe {
-    overflow: hidden;
-    width: 100%;
-    margin: 0;
-    height: 200px;
+  .escucha:hover {
+    color: #FFF;
+    background-size: 100%;
   }
 }
 
@@ -842,46 +812,43 @@ label {
   header .second-stripe .line-break {
     display: none;
   }
-  header .second-stripe .green-button {
+  .conoce-mas {
+    display: block;
     width: 226px;
-    margin-top: 56px;
+    text-transform: uppercase;
+    height: 56px;
     line-height: 56px;
-    padding: 0;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'IBM Plex Mono', monospace;
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(20%, #00F0B8), to(#0000FE));
+    background-image: linear-gradient(90deg, #00F0B8 20%, #0000FE);
+    background-size: 500%;
+    -webkit-transition: all .4s;
+    transition: all .4s;
   }
-  .blue-twist {
-    padding-top: 0;
+  .conoce-mas:hover {
+    color: #FFF;
+    background-size: 100%;
   }
-  .blue-twist .blue-twist-inner {
-    margin-top: 200px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding: 0 100px;
+  .escucha {
+    display: block;
+    width: 345px;
+    text-transform: uppercase;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'IBM Plex Mono', monospace;
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(20%, #00F0B8), to(#0000FE));
+    background-image: linear-gradient(90deg, #00F0B8 20%, #0000FE);
+    background-size: 500%;
+    -webkit-transition: all .4s;
+    transition: all .4s;
   }
-  .blue-twist .blue-twist-inner:before {
-    top: 0;
-  }
-  .blue-twist .blue-twist-inner h2 {
-    margin-left: 100px;
-  }
-  .blue-twist .blue-twist-inner .embed {
-    margin: 0;
-    width: 40.3vw;
-  }
-  .blue-twist .blue-twist-inner .embed iframe {
-    overflow: hidden;
-    width: 100%;
-    margin: 0;
-    height: 232px;
+  .escucha:hover {
+    color: #FFF;
+    background-size: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

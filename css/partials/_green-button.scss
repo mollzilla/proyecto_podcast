@@ -1,0 +1,24 @@
+@mixin green-button($height, $width) {
+  display: block;
+  width: $width;
+  text-transform: uppercase;
+  height: $height;
+  line-height: $height;
+  text-align: center;
+  font-size: 18px;
+  font-family: 'IBM Plex Mono', monospace;
+  background-image: linear-gradient(90deg,  #00F0B8 20%,#0000FE);
+  background-size: 500%;
+  transition: all .4s;
+
+  &:hover {
+    color: #FFF;
+    background-size: 100%;
+  }
+}
+
+  // .green-button {
+  //         height: 56px;
+  //         line-height: 56px;
+  //         width: 345px;
+  //       }

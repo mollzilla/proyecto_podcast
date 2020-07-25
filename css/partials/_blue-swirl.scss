@@ -1,4 +1,5 @@
 .blue-swirl {
+  box-sizing: border-box;
   background-image: linear-gradient(#0000FF, #0000A3);
   padding: 20vw 11px 167px;
   position: relative;
@@ -43,19 +44,40 @@
   }
 }
 
-@media(min-width:1024px) {
+.flat-end.blue-swirl::after {
+  border: unset;
+}
+
+.novedades {
+  padding-bottom: 67px;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+
+@media(min-width:768px) {
 
   .blue-swirl {
-    padding: 186px 100px 167px;
+    padding: 15vw 5% 15vw;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 
     iframe {
-      width: 584px;
+      width:40vw;
+      max-width: 584px;
       height: 232px;
       margin: unset;
       margin-bottom: 72px;
     }
   }
+}
+
+@media(min-width:1240px) {
+  .blue-swirl {
+    padding: 186px 100px 167px;
+  }
+
 }

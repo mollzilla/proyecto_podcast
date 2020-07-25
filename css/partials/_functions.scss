@@ -25,7 +25,6 @@
   }
 }
 
-
 @mixin icons-display($map) {
   @each $order, $icon in $map {
     .tema-#{$order} {
@@ -45,6 +44,14 @@
         animation: bouncy .4s;
       }
     }
+  }
+}
+
+@keyframes dot {
+  100% {
+    transform: scale(45);
+    opacity: 0;
+    background-color: #3b3be6;
   }
 }
 
