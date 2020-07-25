@@ -11,7 +11,17 @@
     flex-direction: column;
 
     .cell {
-      margin-bottom: 65px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto 65px;
+      width: 260px;
+
+      .img-container {
+        position: relative;
+        height: 130px;
+        width: 130px;
+      }
     }
   }
 
@@ -27,11 +37,10 @@
 @media(min-width:1024px) {
 
   .temas {
-    padding: 0 200px;
+    padding: 64px 200px 34px;
 
     h2 {
       width: unset;
-      padding: 65px 0;
     }
 
     .temas-cells {
@@ -39,13 +48,21 @@
       justify-content: space-between;
 
       .cell {
+        position: relative;
         width: 260px;
         margin: 0;
+
+        .img-container {
+          position: relative;
+          height: 130px;
+          width: 130px;
+        }
 
         h3 {
           font-size: 24px;
           text-align: center;
-          padding-top: 16px;
+          padding-top: unset;
+          margin-top: unset;
         }
       }
     }

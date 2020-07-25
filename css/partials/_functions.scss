@@ -1,12 +1,50 @@
+@keyframes bouncy {
+  0% {
+    height: 104px;
+    width: 104px;
+  }
+  40% {
+    height: 120px;
+    width: 120px;
+    opacity: .6;
+  }
+  60% {
+    height: 104px;
+    width: 104px;
+    opacity: .8;
+  }
+  85% {
+    height: 110px;
+    width: 110px;
+    opacity: .9;
+  }
+  94% {
+    height: 104px;
+    width: 104px;
+    opacity: 1;
+  }
+}
+
 
 @mixin icons-display($map) {
   @each $order, $icon in $map {
     .tema-#{$order} {
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
       background-image: url($icon);
       height: 104px;
       width: 104px;
       background-size: contain;
       background-repeat: no-repeat;
+
+      &:hover {
+        animation: bouncy .4s;
+      }
     }
   }
 }
+
