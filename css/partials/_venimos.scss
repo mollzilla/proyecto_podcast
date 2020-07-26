@@ -22,17 +22,24 @@
   margin-bottom: 54px;
 }
 
-
+// @media(min-width: 768px) {
+//   .venimos {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//   }
+// }
 
 @media(min-width:1024px) {
   .venimos {
     position: relative;
-    height:660px;
+    height:500px;
     
     display: flex;
     align-items: flex-start;
-    justify-content: center;
-    padding: 0 200px;
+    justify-content: space-evenly;
+    padding: 0 100px;
     margin: unset;
 
 
@@ -40,8 +47,7 @@
       height: unset;
       img {
         position: relative;
-        top:0;
-        width: 457.6px;
+        width: 350px;
         top: -150px;
       }
     }
@@ -49,6 +55,21 @@
     .venimos-article {
       max-width: 484px;
       margin-top: 24px;
+    }
+  }
+}
+
+@media(min-width:1440px) {
+  .venimos {
+    height:564px;
+    padding: 0 200px;
+
+
+    .phone {
+      img {
+        height:660px;
+        width: auto;
+      }
     }
   }
 }

@@ -16,8 +16,8 @@
   &:after {
     @include blue-swirl-pseudos(0 0 10vw 100vw, transparent transparent #FFF transparent);
     bottom: 0;
-    border-width: 0 0 10vw 100vw;
-    // border-color: transparent transparent #FFF transparent;
+    // border-width: 0 0 10vw 100vw;
+    // // border-color: transparent transparent #FFF transparent;
   }
 
   iframe {
@@ -39,7 +39,7 @@
 }
 
 .flat-end.blue-swirl {
-  padding-bottom: 151px;
+  padding-bottom: 80px;
 
   &::after {
     border: unset;
@@ -47,8 +47,6 @@
 }
 
 .novedades {
-  padding-bottom: 67px;
-
   h2 {
     text-align: center;
   }
@@ -74,6 +72,10 @@
       margin: unset;
       margin-bottom: 72px;
     }
+  }
+
+  .flat-end.blue-swirl {
+    padding-bottom: 151px;
   }
 }
 
