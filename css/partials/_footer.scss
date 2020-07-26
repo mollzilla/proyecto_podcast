@@ -30,11 +30,13 @@ footer {
 
     p {
       text-align: left;
+      margin: unset;
     }
 
     .social-media {
       width: 15vw;
       justify-content: flex-end;
+      margin: unset;
     }
   }
 }

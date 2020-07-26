@@ -167,36 +167,40 @@
 .blue-swirl:before {
   content: "";
   position: absolute;
-  top: 0;
   left: 0;
   width: 0;
   height: 0;
   border-style: solid;
   border-width: 10vw 100vw 0 0;
   border-color: #FFF transparent transparent transparent;
+  top: 0;
 }
 
 .blue-swirl:after {
   content: "";
   position: absolute;
-  bottom: 0;
   left: 0;
   width: 0;
   height: 0;
   border-style: solid;
   border-width: 0 0 10vw 100vw;
   border-color: transparent transparent #FFF transparent;
+  bottom: 0;
+  border-width: 0 0 10vw 100vw;
 }
 
 .blue-swirl iframe {
-  height: 225px;
-  margin-bottom: -36px;
+  height: 232px;
   width: 93.125vw;
 }
 
 .blue-swirl h2 {
   color: #FFF;
   margin-bottom: 21px;
+}
+
+.flat-end.blue-swirl {
+  padding-bottom: 151px;
 }
 
 .flat-end.blue-swirl::after {
@@ -222,6 +226,9 @@
             justify-content: space-between;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .blue-swirl h2 {
+    width: 100%;
   }
   .blue-swirl iframe {
     width: 40vw;
@@ -815,12 +822,14 @@ footer .social-media {
   }
   footer p {
     text-align: left;
+    margin: unset;
   }
   footer .social-media {
     width: 15vw;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    margin: unset;
   }
 }
 
@@ -840,16 +849,6 @@ body {
 
 header {
   width: 90%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding-bottom: 24px;
 }
 
@@ -960,7 +959,8 @@ label {
 .botonera {
   position: absolute;
   top: 44px;
-  width: 100%;
+  left: 0;
+  width: 100vw;
   height: 224px;
   display: block;
   background-color: #0000EC;
@@ -1064,6 +1064,9 @@ label {
   h2 {
     font-size: 3rem;
   }
+  header {
+    width: 100%;
+  }
   header .first-stripe {
     height: 80px;
     display: -webkit-box;
@@ -1136,12 +1139,13 @@ label {
     display: block;
     margin: unset;
     margin-bottom: 72px;
+    width: 628px;
   }
   header .second-stripe {
     padding: 120px 200px 0;
     text-align: left;
   }
-  header .second-stripe h1, header .second-stripe p, header .second-stripe a {
+  header .second-stripe h1, header .second-stripe a {
     margin: unset;
   }
   header .second-stripe .line-break {
