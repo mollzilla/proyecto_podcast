@@ -33,10 +33,12 @@
 
 }
 
-@media(min-width:1024px) {
+
+@media(min-width:768px) {
 
   .temas {
-    padding: 64px 200px 34px;
+    padding: 64px 100px 34px;
+    // padding: unset;
 
     h2 {
       width: unset;
@@ -44,18 +46,12 @@
 
     .temas-cells {
       flex-direction: row;
+      flex-wrap: wrap;
       justify-content: space-between;
 
       .cell {
-        position: relative;
         width: 260px;
         margin: 0;
-
-        .img-container {
-          position: relative;
-          height: 130px;
-          width: 130px;
-        }
 
         h3 {
           font-size: 24px;
@@ -65,6 +61,12 @@
         }
       }
     }
+  }
+}
 
+@media(min-width:1024px) {
+
+  .temas {
+    padding: 64px 200px 34px;
   }
 }

@@ -1,150 +1,71 @@
-/*------------------------------------*\
-    
-  $CUSTOM PROPERTIES / VARIABLES
-
-\*------------------------------------*/
-:root {
-  --black: #000;
-  --white: #fff;
-  --color-1: #bada55;
-  
-  /*------------------------------------*\ 
-    navbar settings 
-  \*------------------------------------*/
-  --bar-width: 1em;
-  --bar-height: .15em;
-  --bar-margin: .08em;
-  --bar-borderradius: 0.1em;
-  
-  /* arrow angle from 0 - 90 */
-  --bar-arrow-angle-value: 45; 
-
-  --bar-transition: cubic-bezier(.25,.01,.75,1);
-  --bar-transition-time: .15s;
-  
-  /*------------------------------------*\ 
-    navbar calculations
-  \*------------------------------------*/
-  /* flexbox prevents margin collapse, so add that margin twice*/
-  --bar-offset: calc( var(--bar-height) + var(--bar-margin) * 2 );   
-  /* arrow angle */
-  --bar-arrow-angle: calc( var(--bar-arrow-angle-value) * 1deg );
-  /* offset of arrows so that they align perfectly */
-  --bar-arrow-offset: calc( var(--bar-height) * 1.2 + var(--bar-margin) * 2 );
-  /* center arrow to label without middle line */
-  --bar-arrow-offsetcenter: calc( 50% * var(--bar-arrow-angle-value) / 90 );
-}
-
-/*------------------------------------*\
-
-  $TUTORIAL ESSENTIAL
-
-\*------------------------------------*/
-
-/* hide input */
 .burger__input {
-    display: none;
+  display: none;
 }
 
-.burger__label {
-  display: none; /* if you don't want to show this for the desktop version */
-  align-items: center;
-  /* put Burger on top of navigation*/
-  position: relative;
-  z-index: 11000;
-  
-  background-color: transparent;
-
-  cursor: pointer;
+.burger-label {
+z-index: 11000;
+background-color: transparent;
+cursor: pointer;
 }
 
-/* put this part into a media query, when to show the nav */
-.burger__label {
-  display: flex;
+.burger-lines {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100%;
+
+transition: transform .15s cubic-bezier(.25,.01,.75,1);
 }
 
-.burger__label > * {
-  padding-left: .5rem;
-  padding-right: .5rem;
+.burger-line {
+display: block;
+
+width: 1em;
+height: .15em;
+
+margin-top: .08em;
+margin-bottom: .08em;
+border-radius: 0.1em;
+
+background-color: (#000);
+
+transition: all .15s cubic-bezier(.25,.01,.75,1);
 }
 
-/*------------------------------------*\
-  $FONT AWESOME
-\*------------------------------------*/
-.burger__input:checked ~ .burger__label i:before {
-    content: '\f00d'; /* change font awesome icon to times symbol */
+
+.burger-label-rotatecross .burger-line:nth-child(2) {
+transition: width .15s cubic-bezier(.25,.01,.75,1);
 }
 
-/*------------------------------------*\
-  $CUSTOM LINES
-\*------------------------------------*/
-.burger__lines {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  
-  transition: transform var(--bar-transition-time) var(--bar-transition);
+.burger-label-rotatecross .burger-line:nth-child(1),
+.burger-label-rotatecross .burger-line:nth-child(3) {
+transition-delay: .15s;
 }
 
-.burger__line {
-  display: block;
-
-  width: var(--bar-width);
-  height: var(--bar-height);
-
-  margin-top: var(--bar-margin);
-  margin-bottom: var(--bar-margin);
-  border-radius: var(--bar-borderradius);
-
-  background-color: var(--black);
-  
-  transition: all var(--bar-transition-time) var(--bar-transition);
+.burger__input:checked ~ .burger-label-rotatecross .burger-line:nth-child(2) {
+width: 0;
+transition-delay: calc( .15s * 0);
 }
 
-/*------------------------------------*\
-  $ROTATE CROSS
-\*------------------------------------*/
-/* animate back to inactive */
-.burger__label--rotatecross .burger__line:nth-child(2) {
-  transition: width var(--bar-transition-time) var(--bar-transition);
-  // transition-delay: calc( var(--bar-transition-time) * 2);
+.burger__input:checked ~ .burger-label-rotatecross .burger-line:nth-child(1),
+.burger__input:checked ~ .burger-label-rotatecross .burger-line:nth-child(3) {
+transition-delay: .15s;
 }
 
-.burger__label--rotatecross .burger__line:nth-child(1),
-.burger__label--rotatecross .burger__line:nth-child(3) {
-  transition-delay: var(--bar-transition-time);
+.burger__input:checked ~ .burger-label-rotatecross .burger-line:nth-child(1) {
+transform: translateY( calc( .15em + .08em * 2 ) );
 }
 
-/* animate to active state */
-
-/* step 1 - middle line width to zero */
-.burger__input:checked ~ .burger__label--rotatecross .burger__line:nth-child(2) {
-  width: 0;
-  transition-delay: calc( var(--bar-transition-time) * 0);
-}
-
-/* step 2 - make a cross */
-.burger__input:checked ~ .burger__label--rotatecross .burger__line:nth-child(1),
-.burger__input:checked ~ .burger__label--rotatecross .burger__line:nth-child(3) {
-  transition-delay: var(--bar-transition-time);
-}
-
-.burger__input:checked ~ .burger__label--rotatecross .burger__line:nth-child(1) {
-  transform: translateY( var(--bar-offset) );
-}
-
-.burger__input:checked ~ .burger__label--rotatecross .burger__line:nth-child(3){
-  transform: 
-    translateY(calc( var(--bar-offset) * -1 ))
-    rotate(90deg)
+.burger__input:checked ~ .burger-label-rotatecross .burger-line:nth-child(3){
+transform: 
+  translateY(calc( calc( .15em + .08em * 2 ) * -1 ))
+  rotate(90deg)
   ;
 }
 
-/* step 3 - rotate everything */
-.burger__input:checked ~ .burger__label--rotatecross .burger__lines {
-  transition: all var(--bar-transition-time) var(--bar-transition);
-  transition-delay: calc( var(--bar-transition-time) * 2 );
-  transform: rotate(var(--bar-arrow-angle));
+.burger__input:checked ~ .burger-label-rotatecross .burger-lines {
+transition: all .15s cubic-bezier(.25,.01,.75,1);
+transition-delay: calc( .15s * 2 );
+transform: rotate(calc( 45 * 1deg ));
 }

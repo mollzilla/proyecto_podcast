@@ -11,14 +11,23 @@
 
 @each $order, $coder in $coders {
   .coder-#{$order} {
+
+    position: relative;
+    width: 100%;
+
+    &::after {
+      display: block;
+      padding-bottom: 75.83%;
+      content:'';
+    }
+
     overflow: hidden;
     background-image: url($coder);
-    width: 100vw;
-    height: 100vw*.75;
     background-size: cover;
   }
 
   .img-inner-text {
+    position: absolute;
     box-sizing: border-box;
     height: 100%;
     width: 100%;
@@ -50,9 +59,8 @@
     flex-direction: row;
     flex-wrap: wrap;
 
-    div {
-      width: 50vw;
-      height: 50vw*.75;
+    .coder {
+      width: 50%;
     }
   }
 }
@@ -62,13 +70,7 @@
   h2 {
     margin: 0 auto 36px auto;
   }
-  .coders {
-    flex-direction: row;
-    flex-wrap: wrap;
-
-    div {
-      width: 33.33vw;
-      height: 33.33vw*.75;
+    .coders .coder {
+      width: 33.33%;
     }
-  }
 }
