@@ -41,9 +41,9 @@ ul {
   padding: 0;
 }
 
-h1, h2 {
+h1, h2, h3 {
    font-family: $font-title;
-  //  width: 90%;
+  font-weight: 400;
 }
 
 .second-stripe {
@@ -106,7 +106,6 @@ a {
 }
 
 #logo {
-  // padding-left: 1rem;
   padding-right: .5rem;
   padding-top: .5rem;
     margin: 0;
@@ -158,7 +157,7 @@ label {
 }
 
 .conoce-mas, .escucha {
-  @include green-button(48px, 90vw);
+  @include green-button(48px, 100%);
 }
 
 @media(min-width:768px) {
@@ -288,8 +287,15 @@ label {
     @include green-button(56px, 226px);
   }
  
-  .escucha{
-    @include green-button(56px, 345px);
+  .novedades {
+
+    h2 {
+      width: 100%;
+      margin-bottom: 36px;
+    }
+    .escucha{
+      @include green-button(56px, 345px);
+    }
   }
   
   }

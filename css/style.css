@@ -294,9 +294,10 @@
 
 .invitadxs h2 {
   margin: 0 auto 14px auto;
+  width: 90%;
 }
 
-.coders {
+.invitadxs .coders {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -306,7 +307,7 @@
           flex-direction: column;
 }
 
-.coder-1 {
+.invitadxs .coder-1 {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -314,13 +315,13 @@
   background-size: cover;
 }
 
-.coder-1::after {
+.invitadxs .coder-1::after {
   display: block;
   padding-bottom: 75.83%;
   content: '';
 }
 
-.img-inner-text {
+.invitadxs .img-inner-text {
   position: absolute;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -344,16 +345,16 @@
   transition: transform .5s, -webkit-transform .5s;
 }
 
-.img-inner-text a {
+.invitadxs .img-inner-text a {
   color: #e3e9e9;
 }
 
-.coder-1:hover .img-inner-text {
+.invitadxs .coder-1:hover .img-inner-text {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 
-.coder-2 {
+.invitadxs .coder-2 {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -361,13 +362,13 @@
   background-size: cover;
 }
 
-.coder-2::after {
+.invitadxs .coder-2::after {
   display: block;
   padding-bottom: 75.83%;
   content: '';
 }
 
-.img-inner-text {
+.invitadxs .img-inner-text {
   position: absolute;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -391,16 +392,16 @@
   transition: transform .5s, -webkit-transform .5s;
 }
 
-.img-inner-text a {
+.invitadxs .img-inner-text a {
   color: #e3e9e9;
 }
 
-.coder-2:hover .img-inner-text {
+.invitadxs .coder-2:hover .img-inner-text {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 
-.coder-3 {
+.invitadxs .coder-3 {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -408,13 +409,13 @@
   background-size: cover;
 }
 
-.coder-3::after {
+.invitadxs .coder-3::after {
   display: block;
   padding-bottom: 75.83%;
   content: '';
 }
 
-.img-inner-text {
+.invitadxs .img-inner-text {
   position: absolute;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -438,16 +439,16 @@
   transition: transform .5s, -webkit-transform .5s;
 }
 
-.img-inner-text a {
+.invitadxs .img-inner-text a {
   color: #e3e9e9;
 }
 
-.coder-3:hover .img-inner-text {
+.invitadxs .coder-3:hover .img-inner-text {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 
-.coder-4 {
+.invitadxs .coder-4 {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -455,13 +456,13 @@
   background-size: cover;
 }
 
-.coder-4::after {
+.invitadxs .coder-4::after {
   display: block;
   padding-bottom: 75.83%;
   content: '';
 }
 
-.img-inner-text {
+.invitadxs .img-inner-text {
   position: absolute;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -485,16 +486,16 @@
   transition: transform .5s, -webkit-transform .5s;
 }
 
-.img-inner-text a {
+.invitadxs .img-inner-text a {
   color: #e3e9e9;
 }
 
-.coder-4:hover .img-inner-text {
+.invitadxs .coder-4:hover .img-inner-text {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 
-.coder-5 {
+.invitadxs .coder-5 {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -502,13 +503,13 @@
   background-size: cover;
 }
 
-.coder-5::after {
+.invitadxs .coder-5::after {
   display: block;
   padding-bottom: 75.83%;
   content: '';
 }
 
-.img-inner-text {
+.invitadxs .img-inner-text {
   position: absolute;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -532,16 +533,16 @@
   transition: transform .5s, -webkit-transform .5s;
 }
 
-.img-inner-text a {
+.invitadxs .img-inner-text a {
   color: #e3e9e9;
 }
 
-.coder-5:hover .img-inner-text {
+.invitadxs .coder-5:hover .img-inner-text {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 
-.coder-6 {
+.invitadxs .coder-6 {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -549,13 +550,13 @@
   background-size: cover;
 }
 
-.coder-6::after {
+.invitadxs .coder-6::after {
   display: block;
   padding-bottom: 75.83%;
   content: '';
 }
 
-.img-inner-text {
+.invitadxs .img-inner-text {
   position: absolute;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -579,20 +580,20 @@
   transition: transform .5s, -webkit-transform .5s;
 }
 
-.img-inner-text a {
+.invitadxs .img-inner-text a {
   color: #e3e9e9;
 }
 
-.coder-6:hover .img-inner-text {
+.invitadxs .coder-6:hover .img-inner-text {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 
 @media (min-width: 768px) {
-  h2 {
+  .invitadxs h2 {
     margin: 0 auto 36px auto;
   }
-  .coders {
+  .invitadxs .coders {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -600,16 +601,17 @@
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .coders .coder {
+  .invitadxs .coders .coder {
     width: 50%;
   }
 }
 
 @media (min-width: 1024px) {
-  h2 {
-    margin: 0 auto 36px auto;
+  .invitadxs h2 {
+    width: unset;
+    margin: 0 auto 36px 200px;
   }
-  .coders .coder {
+  .invitadxs .coders .coder {
     width: 33.33%;
   }
 }
@@ -688,6 +690,7 @@
 
 .temas h2 {
   margin: 48px auto 24px auto;
+  width: 90%;
 }
 
 .temas .temas-cells {
@@ -720,7 +723,6 @@
 }
 
 .temas h3 {
-  font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 800;
   margin-top: 12px;
 }
@@ -881,8 +883,9 @@ ul {
   padding: 0;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
 }
 
 .second-stripe .line-break {
@@ -994,7 +997,7 @@ label {
 
 .conoce-mas, .escucha {
   display: block;
-  width: 90vw;
+  width: 100%;
   text-transform: uppercase;
   height: 48px;
   line-height: 48px;
@@ -1176,7 +1179,11 @@ label {
     color: #FFF;
     background-size: 100%;
   }
-  .escucha {
+  .novedades h2 {
+    width: 100%;
+    margin-bottom: 36px;
+  }
+  .novedades .escucha {
     display: block;
     width: 345px;
     text-transform: uppercase;
@@ -1191,7 +1198,7 @@ label {
     -webkit-transition: all .4s;
     transition: all .4s;
   }
-  .escucha:hover {
+  .novedades .escucha:hover {
     color: #FFF;
     background-size: 100%;
   }

@@ -1,8 +1,9 @@
 .invitadxs {
   h2 {
     margin: 0 auto 14px auto;
+    width: 90%
   }
-}
+
 
 .coders {
   display: flex;
@@ -10,67 +11,76 @@
 }
 
 @each $order, $coder in $coders {
-  .coder-#{$order} {
+    .coder-#{$order} {
 
-    position: relative;
-    width: 100%;
+      position: relative;
+      width: 100%;
 
-    &::after {
-      display: block;
-      padding-bottom: 75.83%;
-      content:'';
-    }
+      &::after {
+        display: block;
+        padding-bottom: 75.83%;
+        content:'';
+     }
 
-    overflow: hidden;
-    background-image: url($coder);
-    background-size: cover;
-  }
+        overflow: hidden;
+        background-image: url($coder);
+        background-size: cover;
+      }
 
-  .img-inner-text {
-    position: absolute;
-    box-sizing: border-box;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    background-image: linear-gradient(rgba(90,90,90, 0.75), rgba(0,0,0, 0.75));
-    transform: translateY(100%);
-    font-size: 2rem;
+    .img-inner-text {
+      position: absolute;
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      background-image: linear-gradient(rgba(90,90,90, 0.75), rgba(0,0,0, 0.75));
+      transform: translateY(100%);
+      font-size: 2rem;
 
-    a {
-      color: rgb(227, 233, 233);
+      a {
+        color: rgb(227, 233, 233);
+      } 
+  
+      transition:transform .5s;
     }
   
-    transition:transform .5s;
+    .coder-#{$order}:hover .img-inner-text {
+      transform: translateY(0);
+    }
   }
-  
-  .coder-#{$order}:hover .img-inner-text {
-    transform: translateY(0);
-  }
+
 }
 
 @media(min-width:768px) {
 
-  h2 {
-    margin: 0 auto 36px auto;
-  }
-  .coders {
-    flex-direction: row;
-    flex-wrap: wrap;
+  .invitadxs {
+    h2 {
+      margin: 0 auto 36px auto;
+    }
+    .coders {
+      flex-direction: row;
+      flex-wrap: wrap;
 
-    .coder {
-      width: 50%;
+      .coder {
+        width: 50%;
+      }
     }
   }
 }
 
 @media(min-width:1024px) {
 
-  h2 {
-    margin: 0 auto 36px auto;
-  }
+  .invitadxs {
+
+    h2 {
+      width: unset;
+      margin: 0 auto 36px 200px;
+    }
     .coders .coder {
       width: 33.33%;
     }
+
+  }
 }
