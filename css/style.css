@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Bouncy... Mi bebé! */
 @-webkit-keyframes bouncy {
   0% {
     height: 104px;
@@ -52,6 +53,7 @@
   }
 }
 
+/* En este punto se aprende que es buena práctica animar con transform: scale. */
 @-webkit-keyframes dot {
   100% {
     -webkit-transform: scale(38);
@@ -60,7 +62,6 @@
     background-color: #3b3be6;
   }
 }
-
 @keyframes dot {
   100% {
     -webkit-transform: scale(38);
@@ -190,7 +191,13 @@
 
 .blue-swirl iframe {
   height: 232px;
+  border: unset;
   width: 93.125vw;
+  /* Debido al comportamiento inestable de los iframes, hay dos propuestas para lograr el wireframe propuesto */
+  /* Opción 1 - iframe se renderiza dejando un margen que es overflow propio del iframe */
+  height: 225px;
+  margin-bottom: -36px;
+  /* Opción 2 - iframe se renderiza con el 100% de su height sin margen*/
 }
 
 .blue-swirl h2 {
@@ -229,7 +236,6 @@
     width: 40vw;
     max-width: 584px;
     height: 232px;
-    margin: unset;
     margin-bottom: 72px;
   }
   .flat-end.blue-swirl {
@@ -793,7 +799,7 @@ footer {
   margin: 0 auto;
 }
 
-footer p {
+footer .copyright {
   text-align: center;
 }
 
@@ -828,7 +834,7 @@ footer .social-media {
         -ms-flex-align: center;
             align-items: center;
   }
-  footer p {
+  footer .copyright {
     text-align: left;
     margin: unset;
   }
@@ -919,6 +925,11 @@ h2 {
   text-decoration: line-through;
 }
 
+.crossed:hover {
+  -webkit-text-decoration-color: #0000EC;
+          text-decoration-color: #0000EC;
+}
+
 .dot-container {
   position: relative;
   display: inline-block;
@@ -933,8 +944,9 @@ h2 {
   right: 8px;
   height: 5.5px;
   width: 5.5px;
-  background-color: #0000EC;
+  background-color: #060A24;
   border-radius: 50%;
+  z-index: -1;
   -webkit-animation: dot 2.5s;
           animation: dot 2.5s;
   -webkit-animation-delay: 1s;
@@ -1011,7 +1023,7 @@ label {
   line-height: 48px;
   text-align: center;
   font-size: 18px;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   background-image: -webkit-gradient(linear, left top, right top, color-stop(20%, #00F0B8), to(#0000FE));
   background-image: linear-gradient(90deg, #00F0B8 20%, #0000FE);
   background-size: 500%;
@@ -1033,7 +1045,7 @@ label {
     line-height: 56px;
     text-align: center;
     font-size: 18px;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: "IBM Plex Mono", monospace;
     background-image: -webkit-gradient(linear, left top, right top, color-stop(20%, #00F0B8), to(#0000FE));
     background-image: linear-gradient(90deg, #00F0B8 20%, #0000FE);
     background-size: 500%;
@@ -1052,7 +1064,7 @@ label {
     line-height: 56px;
     text-align: center;
     font-size: 18px;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: "IBM Plex Mono", monospace;
     background-image: -webkit-gradient(linear, left top, right top, color-stop(20%, #00F0B8), to(#0000FE));
     background-image: linear-gradient(90deg, #00F0B8 20%, #0000FE);
     background-size: 500%;
@@ -1180,7 +1192,7 @@ label {
     line-height: 56px;
     text-align: center;
     font-size: 18px;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: "IBM Plex Mono", monospace;
     background-image: -webkit-gradient(linear, left top, right top, color-stop(20%, #00F0B8), to(#0000FE));
     background-image: linear-gradient(90deg, #00F0B8 20%, #0000FE);
     background-size: 500%;
@@ -1203,7 +1215,7 @@ label {
     line-height: 56px;
     text-align: center;
     font-size: 18px;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: "IBM Plex Mono", monospace;
     background-image: -webkit-gradient(linear, left top, right top, color-stop(20%, #00F0B8), to(#0000FE));
     background-image: linear-gradient(90deg, #00F0B8 20%, #0000FE);
     background-size: 500%;

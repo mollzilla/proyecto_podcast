@@ -8,25 +8,26 @@
   &:before {
     @include blue-swirl-pseudos(10vw 100vw 0 0, #FFF transparent transparent transparent);
     top: 0;
-    // border-width: 10vw 100vw 0 0;
-    // border-color: #FFF transparent transparent transparent;
-
   }
 
   &:after {
     @include blue-swirl-pseudos(0 0 10vw 100vw, transparent transparent #FFF transparent);
     bottom: 0;
-    // border-width: 0 0 10vw 100vw;
-    // // border-color: transparent transparent #FFF transparent;
   }
 
   iframe {
     height: 232px;
-    // margin-bottom:-36px;
+    border: unset;
     width:93.125vw;
-    // width: 298px;
-    // margin-bottom: 11px;
 
+    /* Debido al comportamiento inestable de los iframes, hay dos propuestas para lograr el wireframe propuesto */
+
+    /* Opción 1 - iframe se renderiza dejando un margen que es overflow propio del iframe */
+    height: 225px;
+    margin-bottom:-36px;
+
+    /* Opción 2 - iframe se renderiza con el 100% de su height sin margen*/
+    // margin-bottom: 11px;
     // &:last-child {
     //   margin-bottom: 0;
     // }
@@ -69,7 +70,6 @@
       width:40vw;
       max-width: 584px;
       height: 232px;
-      margin: unset;
       margin-bottom: 72px;
     }
   }

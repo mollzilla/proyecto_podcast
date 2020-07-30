@@ -6,7 +6,7 @@ footer {
   justify-content: space-evenly;
   margin: 0 auto;
 
-  p {
+  .copyright {
     text-align: center;
   }
 
@@ -17,7 +17,7 @@ footer {
     justify-content: space-around;
     align-items: center;
     font-size: 18px;
-    }
+  }
 }
 
 
@@ -28,7 +28,7 @@ footer {
     justify-content: space-between;
     align-items: center;
 
-    p {
+    .copyright {
       text-align: left;
       margin: unset;
     }

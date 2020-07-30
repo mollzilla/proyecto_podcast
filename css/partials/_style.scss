@@ -71,6 +71,9 @@ h2 {
 
 .crossed {
   text-decoration: line-through;
+  &:hover {
+    text-decoration-color: #0000EC;
+  }
 }
 
 .dot-container {
@@ -87,8 +90,9 @@ h2 {
   right:8px;
   height:5.5px;
   width: 5.5px;
-  background-color: #0000EC;
+  background-color: $dark;
   border-radius: 50%;
+  z-index: -1;
 
   animation: dot 2.5s;
   animation-delay: 1s;

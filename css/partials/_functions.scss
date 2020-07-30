@@ -1,3 +1,5 @@
+/* Bouncy... Mi bebé! */
+
 @keyframes bouncy {
   0% {
     height: 104px;
@@ -47,6 +49,7 @@
   }
 }
 
+/* En este punto se aprende que es buena práctica animar con transform: scale. */
 @keyframes dot {
   100% {
     transform: scale(38);
@@ -63,5 +66,5 @@
   height: 0;
   border-style: solid;
   border-width: $border-width;
-  border-color: $border-color
+  border-color: $border-color;
 }
