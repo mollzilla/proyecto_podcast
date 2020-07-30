@@ -195,9 +195,12 @@
   width: 93.125vw;
   /* Debido al comportamiento inestable de los iframes, hay dos propuestas para lograr el wireframe propuesto */
   /* Opción 1 - iframe se renderiza dejando un margen que es overflow propio del iframe */
-  height: 225px;
-  margin-bottom: -36px;
   /* Opción 2 - iframe se renderiza con el 100% de su height sin margen*/
+  margin-bottom: 11px;
+}
+
+.blue-swirl iframe:last-child {
+  margin-bottom: 0;
 }
 
 .blue-swirl h2 {
