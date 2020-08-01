@@ -22,15 +22,16 @@
 
     /* Debido al comportamiento inestable de los iframes, hay dos propuestas para lograr el wireframe propuesto */
 
-    /* Opción 1 - iframe se renderiza dejando un margen que es overflow propio del iframe */
-    // height: 225px;
-    // margin-bottom:-36px;
-
-    /* Opción 2 - iframe se renderiza con el 100% de su height sin margen*/
+    /* Opción 1 - iframe se renderiza con el 100% de su height sin margen (default) */
     margin-bottom: 11px;
     &:last-child {
       margin-bottom: 0;
     }
+
+    /* Opción 2 - iframe se renderiza dejando un margen que es overflow propio del iframe (excepciones) */
+    // height: 225px;
+    // margin-bottom:-36px;
+
   }
 
   h2 {
